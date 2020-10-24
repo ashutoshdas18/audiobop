@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2">
+    <title>Document</title>
+    <link rel="stylesheet" href="/views/css/style.css">
+</head>
+<body>
+    {{>header}}
+    <div class="sectionContainer">
+    <div class="text">
+        Welcome to Audiobop<br>
+        Search the lyrics of your favourite song
+    </div>
+    <div class="formContainer">
+    <form action="/search" method="post" class="forms">
+        <input type="text" class="textBox" name="data" placeholder="Justin Bieber, Sorry">
+        <input type="submit" class="inputBtn">
+    </form>
+    </div>
+    </div>
+</body>
+<script src="/views/js/index.js"></script>
+</html>

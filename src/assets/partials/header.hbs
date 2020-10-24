@@ -1,0 +1,245 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.headerContainer{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.leftHalf{
+    width:20% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftHalf>ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+}
+.headerImage{
+    height: 30px;
+    width: 30px;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+.logoLink{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color:rgb(22, 22, 22);
+    text-align: center;
+}
+.headerText{
+    color:#161e2e;
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 10px;
+
+}
+
+
+.center{
+    width: 60%;
+}
+.center>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    
+}
+.center>ul>li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+.center>ul>li>a{
+    text-decoration: none;
+    color: #161e2e;
+    transition: 200ms ease-in-out;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    height: 25px;
+    border-color:  white;
+    padding: 0 5px;
+    border-radius: 10%;
+}
+
+.center>ul>li>a:hover{
+    color: #422fbd;
+    background-color: #d8d4f1;
+    border-color: #d8d4f1;
+}
+
+
+
+.righthalf{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.righthalf>ul{
+    display: flex;
+}
+.righthalf>ul>li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+
+.righthalf>ul>li>a{
+    text-decoration: none;
+    color: #161e2e;
+    transition: 200ms ease-in-out;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    height: 25px;
+    border:2px;
+    background-color: rgb(41, 41, 41);
+    border: 2.3px solid rgb(41, 41, 41);
+    padding: 0 15px;
+    border-radius: 8%;
+    color: white;
+}
+.righthalf>ul>li:first-child>a{
+    background:none;
+    border: 2px solid black;
+    padding: 0 15px;
+    transition: 200ms ease-in-out;
+    color: black;
+}
+.righthalf>ul>li:first-child>a:hover{
+    background:rgba(189, 188, 188, 0.418);
+}
+
+.righthalf>ul>li:last-child{
+    height: 30px;
+    width: 30px;
+    background-color:rgba(177, 177, 177, 0.507) ;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    display: none;
+    visibility: hidden;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color:rgb(22, 22, 22);
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility linear 300ms;
+}
+@media only screen and (max-width: 1023px) {
+  .leftHalf{
+      width: 50%;
+      justify-content:center;
+      margin-left: 10px;
+  }
+  .leftHalf>ul{
+      padding-left: 10px;
+  }
+  .center>ul{
+      justify-content: flex-start;
+  }
+  @media only screen and (max-width: 664px){
+     .center{
+         background-color: #1F2228;
+         z-index: 10;
+         position: absolute;
+         transform: translateX(calc(200%));
+         top: 82px;
+         transition: 500ms  ease-in-out ;
+     }
+      .center>ul{
+          flex-direction: column;
+          height: auto;
+          
+      }
+      .center>ul>li{
+          padding-bottom: 20px;
+          width: 90%;
+          text-align: center;
+      }
+      .center>ul>li:first-child{
+          padding-top: 20px;
+      }
+      
+      .center>ul>li>a{
+          color: white;
+          display: block;
+          width: 100%;
+      }
+      .righthalf>ul>li:last-child{
+          display: block;
+          visibility: visible;
+          z-index: 10;
+          
+      }
+      .overlay{
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s linear 0s;
+      }
+      
+
+  }
+  
+}
+
+@media only screen and (max-width: 454px){
+    .headerText{
+      display: none;
+  }
+  .leftHalf{
+      justify-content: flex-start;
+      margin-left: 10px;
+  }
+  
+}
+
+
+</style>
+
+<div class="headerContainer">
+    <div class="leftHalf">
+        <ul>
+        <li><a href="/" class="logoLink"><img class="headerImage" src="/images/music.svg" alt="header image"></a></li>
+        <li><a class="headerText" href="/">audiobop</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <ul>
+            <li><a href="/help" class="centertags">Help</a></li>
+            <li><a href="/about" class="centertags">About</a></li>
+            <li><a href="/api" class="centertags">APIs</a></li>
+            <li><a href="Contact" class="centertags">Contact</a></li>
+        </ul>
+    </div>
+    <div class="righthalf">
+        <ul>
+            <li><a href="/membership">Plus</a></l>
+            <li><a href="/login">Login</a></li>
+            <li class="ham">=</li>
+            
+        </ul>
+    </div>
+    <div class="overlay"></div>
+</div>
