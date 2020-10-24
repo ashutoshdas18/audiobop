@@ -23,9 +23,9 @@ class hello{
         this.lyrics=this.dataElement.split('<div>')[1].split('</div>')[0];
 
     }
-    catch(error){
-        this.lyrics="Invalid Credentials"
-    }
+    // catch(error){
+    //     this.lyrics="Invalid Credentials"
+    // }
    }
 }
 
