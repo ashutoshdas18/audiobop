@@ -1,12 +1,17 @@
-const axios = require('axios')
+import axios from 'axios';
 
 window.onload=()=>{
         console.log('Window Loaded and viewport is:'+window.innerHeight);
         loadburger();
         (async function(){
             const data=await axios.get(`https://www.azlyrics.com/lyrics/justinbieber/sorry.html`);
+            try{
         const dataItem=data.data
         console.log(dataItem);
+            }
+            catch(error){
+                console.log(error)
+            }
         })();
         
     }
