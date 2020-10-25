@@ -40,9 +40,6 @@ app.post('/search', (req, res) => {
     const newTextData=newText.split(',')
     state.search=new lyricsClass.hello(newTextData[0],newTextData[1]);
     await state.search.getLyricss();
-    // res.render('lyrics',{
-    //     lyrics:state.search.lyrics
-    // })
    res.render('lyrics',{
        lyrics:state.search.lyrics
    })
