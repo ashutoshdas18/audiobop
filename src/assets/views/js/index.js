@@ -3,9 +3,12 @@ const axios = require('axios')
 window.onload=()=>{
         console.log('Window Loaded and viewport is:'+window.innerHeight);
         loadburger();
-        const data=await axios.get(`https://www.azlyrics.com/lyrics/justinbieber/sorry.html`);
+        (async function(){
+            const data=await axios.get(`https://www.azlyrics.com/lyrics/justinbieber/sorry.html`);
         const dataItem=data.data
         console.log(dataItem);
+        })();
+        
     }
 
     var worker = () => {
