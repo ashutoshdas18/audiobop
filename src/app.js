@@ -3,7 +3,6 @@ const path = require('path');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const lyricsClass = require('./assets/partials/lyricsparser');
-const { stat } = require('fs');
 const state={};
 
  
@@ -41,7 +40,8 @@ app.post('/search', (req, res) => {
     state.search=new lyricsClass.hello(newTextData[0],newTextData[1]);
     await state.search.getLyricss();
    res.render('lyrics',{
-       lyrics:state.search.lyrics
+       lyrics:state.search.lyrics,
+       test:state.search.test
    })
     })();	
 });
